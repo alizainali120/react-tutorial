@@ -163,7 +163,8 @@ export async function fetchInvoiceById(id: string) {
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
-    throw new Error('Failed to fetch invoice.');
+    // Commenting out the throw to allow notFound() to trigger in the calling function
+    // throw new Error('Failed to fetch invoice.');
   }
 }
 
